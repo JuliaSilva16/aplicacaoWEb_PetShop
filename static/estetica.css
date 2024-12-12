@@ -5,14 +5,15 @@
 }
 
 h1{
-    color: rebeccapurple;
-    font-family: "Monotype Corsiva";
-    text-align: left;
+    color: #335099;
+    font-family: Jokerman;
+    text-align: center;
 }
 
 p{
     color: rebeccapurple;
     font-family: 'fantasy';
+    text-align: center;
 }
 
 
@@ -32,11 +33,12 @@ main{
     height: 100vh;
     border: 1px solid white;
     background-color: lightblue;
+    text-align: center;
 }
 
 nav{
     display: inline-block;
-    background-color: mediumpurple;
+    background-color: hotpink;
     height: 100vh;
     width: 11%;
     font-size: 20px;
@@ -51,6 +53,7 @@ nav{
     padding: 10px;
     font-weight: bold;
     font-size: 20px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.8);
 }
 
 .a {
@@ -64,4 +67,28 @@ nav{
     float: left;
     padding: 10px;
     margin: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+
+form{
+    display: inline-block;
+    background-color: hotpink;
+    font-size: medium;
+    border-radius: 20px;
+    width: 400px;
+    height: 500px;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+input {
+    margin-bottom: 30px;
+    display: block;
+    margin-left: 120px;
 }

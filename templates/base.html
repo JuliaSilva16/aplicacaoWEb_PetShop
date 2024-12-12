@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/estetica.css">
+</head>
+<body>
+
+<div class="container">
+
+<header>
+    <h1>
+        Pets & Pets
+    </h1>
+</header>
+
+<nav>
+    <ul>
+        <p>MENU</p>
+        <a href="{{url_for('home')}}">Voltar ao inicío </a>
+        <br>
+        <br>
+        <p>CADASTRO</p>
+        <br>
+        <li><a href="{{ url_for('novo_cliente') }}">Cadastro cliente</a></li>
+        <li><a href="{{ url_for('novo_animal') }}"> Cadastro animal</a></li>
+        <li><a href="{{ url_for('novo_veterinario') }}"> Cadastro veterinario</a></li>
+        <li><a href="{{ url_for('nova_consulta') }}"> Cadastro consulta</a></li>
+        <br>
+        <br>
+        <p>LISTA</p>
+        <br>
+        <li><a href="{{ url_for('lista_cliente') }}"> Lista de cliente </a></li>
+        <li><a href="{{ url_for('lista_animal') }}"> Lista de produto </a></li>
+        <li><a href="{{ url_for('lista_veterinario') }}"> Lista de veterinários </a></li>
+        <li><a href="{{ url_for('lista_consulta') }}"> Lista de consultas </a></li>
+
+    </ul>
+</nav>
+
+<main>
+    <!--Início do corpo da página que será utilizada como template-->
+    {% block conteudo %}
+
+    {% endblock conteudo %}
+    <!--Fim de corpo da página que será utilizada como template-->
+</main>
+
+</div>
+
+</body>
+</html>

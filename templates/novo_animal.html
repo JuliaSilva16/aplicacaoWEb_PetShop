@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="flash-error">
+                {% for message in messages%}
+                    {{ message }}
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+
+    <form action="{{url_for('novo_animal')}}" method="POST">
+
+        <div class="cadastro_animal">
+            <h3>Cadastro do animal </h3>
+            <label> Nome:</label>
+            <input type="text" name="form_nome_animal">
+
+            <label> Raça:</label>
+            <input type="text" name="form_raca1">
+
+            <label> Nascimento: </label>
+            <input type="text" name="form_anoNasci">
+
+            <label> ID cliente:</label>
+            <input type="text" name="form_idCliente3">
+
+            <button>Adicionar</button>
+            <button><a href = "{{url_for('novo_animal')}}">Cancelar</a></button>
+        </div>
+
+    </form>
+
+{% endblock conteudo %}

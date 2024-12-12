@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="flash-error">
+                {% for message in messages%}
+                    {{ message }}
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+
+    <form action="{{url_for('novo_veterinario')}}" method="POST">
+
+        <div class="novo_veterinario">
+            <h3>Cadastro de veterinário </h3>
+            <label> Nome:</label>
+            <input type="text" name="form_nomeVet">
+
+            <label> CRMV do veterinário:</label>
+            <input type="text" name="form_crmv">
+
+            <label> Valor do salário: </label>
+            <input type="text" name="form_salario2">
+
+            <label> ID do veterinário:</label>
+            <input type="text" name="form_id_vet">
+
+            <button>Adicionar</button>
+            <button><a href = "{{url_for('novo_veterinario')}}">Cancelar</a></button>
+        </div>
+
+    </form>
+
+{% endblock conteudo %}
