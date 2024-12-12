@@ -1,0 +1,16 @@
+{% extends 'base.html'%}
+
+<!--Início do corpo da página que será utilizada como template-->
+{% block conteudo %}
+    {% for item in lista_de_consultas %}
+        <div class="clonsultas">
+            <p>Nome do motivo: </p>{{item.motivo_id2}}<br>
+            <p>ID do animal: </p>{{item.idAnimal2}}<br>
+            <p>ID do veterinário: </p>{{item.idVeterinario}}<br>
+            <p>Data: </p>{{ item.data1}}<br>
+            <p>Horário: </p>{{ item.hora}} {{item.minuto}}<br>
+        </div>
+    {% endfor %}
+
+{% endblock conteudo %}
+<!--Fim de corpo da página que será utilizada como template-->

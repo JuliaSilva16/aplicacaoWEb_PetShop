@@ -1,0 +1,15 @@
+{% extends 'base.html'%}
+
+<!--Início do corpo da página que será utilizada como template-->
+{% block conteudo %}
+    {% for item in lista_de_veterinario %}
+        <div class="veterinareios">
+            <p>Nome do veterinário: </p>{{item.nomeVet}}<br>
+            <p>CRMV: </p>{{item.crmv}}<br>
+            <p>Valor da consulta: </p>{{item.v_consulta1}}<br>
+            <p>Salário: </p>{{ item.salario2}}<br>
+        </div>
+    {% endfor %}
+
+{% endblock conteudo %}
+<!--Fim de corpo da página que será utilizada como template-->

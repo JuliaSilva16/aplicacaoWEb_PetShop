@@ -1,0 +1,15 @@
+{% extends 'base.html'%}
+
+<!--Início do corpo da página que será utilizada como template-->
+{% block conteudo %}
+    {% for item in lista_de_clientes %}
+        <div class="clientes">
+            <p>Nome: </p>{{item.Nome1}}<br>
+            <p>telefone: </p>{{item.telefone}}<br>
+            <p>ID cliente: </p>{{ item.id_Area2}}<br>
+            <p>ID animal:</p>{{item.id_animal}}<br>
+        </div>
+    {% endfor %}
+
+{% endblock conteudo %}
+<!--Fim de corpo da página que será utilizada como template-->
